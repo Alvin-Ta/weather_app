@@ -12,19 +12,40 @@ weather = {
         const{name} = data;
         const{temp, feels_like, humidity} = data.main;
         const{description, icon} = data.weather[0];
-        console.log(name, temp, feels_like, humidity, description, icon);
-
+        let temp_out = temp.toFixed();
+        let feelsLike = feels_like.toFixed();
+        
         document.querySelector(".city").innerText = "Weather in " + name;
-        document.querySelector(".temp").innerText = temp+"°";
+        document.querySelector(".temp").innerText = temp_out+"°C";
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";;
         document.querySelector(".Desc").innerText = description;
-        document.querySelector("city").innerText = "Weather in " + name;
-        document.querySelector("city").innerText = "Weather in " + name;
-        
-
-    }
+        document.querySelector(".feels_like").innerText = "Feels Like: "+feelsLike+"°C";
+        document.querySelector("Humid").innerText = "Humidity: " + humidity;   
+    },
+    
+    search: function (){
+    this.get_weather_api(document.querySelector(".search_bar").value)
+    },
 
 
     
-}
+};
+
+document.querySelector(".search button").addEventListener("click", () => {
+    weather.search();
+});
+
+document.querySelector(".search button").addEventListener("keyup", function(event){
+    if (event.key == "Enter")
+        weather.search();
+});
+
+
+
+
+
+
+
+
+
 // let city_searched = document.querySelector(search_bar);
