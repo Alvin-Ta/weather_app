@@ -17,10 +17,12 @@ weather = {
         
         document.querySelector(".city").innerText = "Weather in " + name;
         document.querySelector(".temp").innerText = temp_out+"°C";
-        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";;
+        document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".Desc").innerText = description;
         document.querySelector(".feels_like").innerText = "Feels Like: "+feelsLike+"°C";
-        document.querySelector("Humid").innerText = "Humidity: " + humidity;   
+        document.querySelector("Humid").innerText = "Humidity: " + humidity;
+        
+        //document.querySelector(".background_image").innerText = "https://source.unsplash.com/1600x900/?italy";
     },
     
     search: function (){
