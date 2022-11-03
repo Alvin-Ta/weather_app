@@ -32,15 +32,26 @@ template{
     display: flex;
     align-items: center;
     border-radius: 5px;
-    height: 25px;
-    width: 75%;
+    height: 22px;
+    width: 2.5em;
     font-family: inherit;
     font-weight: bold;
     outline: none;
 }
+input.search_bar{
+    
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 6px;
+}
 
 button{
-    margin-left: 5px;
+    margin: 0.5px;
+    border-radius: 10px;
+    height: 27px;
+    width: 30px;
+    border: none;
 }
 
 .Desc{
